@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SK Khalic Meera — AI, systems, networking and security portfolio">
+<title>SK Khalic Meera — AI Systems Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{
+  --bg:#05070c;--bg2:#080d16;--card:#0b111c;--card2:#0e1623;--text:#f5f7fb;--muted:#8f9caf;
+  --line:rgba(255,255,255,.09);--lime:#c8ff4d;--cyan:#5ee7ff;--violet:#9a7cff;
+  --max:1180px;--r:22px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:
+radial-gradient(circle at 75% 8%,rgba(154,124,255,.12),transparent 30rem),
+radial-gradient(circle at 10% 20%,rgba(94,231,255,.08),transparent 28rem),
+var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.55}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 85%);z-index:-1}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:30;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(5,7,12,.72);backdrop-filter:blur(18px)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:1.05rem}.logo em{font-style:normal;color:var(--lime)}
+.links{display:flex;gap:27px;color:#aeb8c8;font-size:.88rem}.links a{transition:.2s}.links a:hover{color:#fff}
+.hero{padding:155px 0 90px;min-height:760px;display:grid;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:55px;align-items:end}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font:500 .72rem "DM Mono",monospace;color:var(--lime);text-transform:uppercase;letter-spacing:.12em}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 18px var(--lime)}
+h1{font-size:clamp(3.5rem,7.2vw,7.6rem);line-height:.88;letter-spacing:-.075em;margin:23px 0 30px;max-width:900px}
+.gradient{background:linear-gradient(100deg,#fff 5%,#fff 30%,var(--cyan) 60%,var(--violet) 92%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:720px;color:#a9b5c7;font-size:1.08rem}.lead b{color:#fff}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}.btn{padding:13px 17px;border:1px solid var(--line);border-radius:12px;background:#0d1420;font-weight:700;font-size:.9rem;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.2)}
+.btn.main{background:var(--lime);color:#080b05;border-color:var(--lime)}
+.hero-side{border-left:1px solid var(--line);padding-left:28px}.terminal{background:rgba(10,16,27,.78);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.3)}
+.term-top{height:38px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:0 14px}.term-top i{width:7px;height:7px;border-radius:50%;background:#465160}.term-body{padding:19px;font:400 .76rem/1.8 "DM Mono",monospace;color:#b4c0d0}.prompt{color:var(--lime)}.blue{color:var(--cyan)}.purple{color:#b7a7ff}
+section{padding:105px 0}.section-title{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}.section-title h2{font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.055em;line-height:1;margin:8px 0 0}.section-title p{max-width:400px;color:var(--muted);font-size:.9rem}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{background:linear-gradient(145deg,rgba(14,22,35,.94),rgba(8,13,22,.94));border:1px solid var(--line);border-radius:var(--r);padding:27px;position:relative;overflow:hidden}.card:after{content:"";position:absolute;inset:auto -70px -100px auto;width:230px;height:230px;background:radial-gradient(circle,rgba(94,231,255,.09),transparent 68%);pointer-events:none}
+.about{grid-column:span 7}.facts{grid-column:span 5}.card p{color:var(--muted);margin:0}.about p{font-size:1.08rem;max-width:720px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{border:1px solid var(--line);background:rgba(255,255,255,.035);padding:7px 10px;border-radius:8px;font:400 .7rem "DM Mono",monospace;color:#cbd5e2}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.fact strong{display:block;font-size:1.5rem;letter-spacing:-.04em}.fact span{font-size:.72rem;color:var(--muted)}
+.project{grid-column:span 4;min-height:390px;display:flex;flex-direction:column}.project.featured{grid-column:span 8;min-height:430px;background:linear-gradient(145deg,#101a28,#0a101a)}
+.project .num{font:500 .7rem "DM Mono",monospace;color:var(--lime);letter-spacing:.1em}.project h3{font-size:1.7rem;line-height:1.08;letter-spacing:-.045em;margin:15px 0 12px}.project p{font-size:.9rem}.stack{margin-top:auto;padding-top:24px;color:#d7e0eb;font:400 .7rem "DM Mono",monospace}.project-link{margin-top:18px;font-size:.78rem;color:var(--cyan)}
+.feature-orb{position:absolute;right:-40px;top:-50px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(200,255,77,.22),rgba(94,231,255,.08) 38%,transparent 68%);filter:blur(1px)}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.case{padding:27px;border:1px solid var(--line);border-radius:var(--r);background:#0a1019}.case .label{font:500 .68rem "DM Mono",monospace;color:var(--cyan);text-transform:uppercase}.case h3{font-size:1.25rem;margin:10px 0}.case p{color:var(--muted);font-size:.88rem}
+.timeline{border-top:1px solid var(--line)}.row{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:25px 0;border-bottom:1px solid var(--line)}.date{font:500 .7rem "DM Mono",monospace;color:var(--lime)}.row h3{margin:0 0 5px;font-size:1.05rem}.row p{margin:7px 0 0;color:var(--muted);font-size:.88rem}.org{font-size:.83rem;color:#e7edf5}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.skill{border:1px solid var(--line);border-radius:17px;padding:20px;background:rgba(255,255,255,.025)}.skill h3{font-size:.9rem;margin:0 0 8px}.skill p{font-size:.8rem;color:var(--muted)}
+.ach{display:grid;grid-template-columns:1fr 1fr;gap:16px}.award{border:1px solid var(--line);border-radius:18px;padding:22px;background:linear-gradient(145deg,#0e1725,#090e17)}.award .mark{font:500 .68rem "DM Mono",monospace;color:var(--lime)}.award h3{font-size:1rem;margin:9px 0}.award p{color:var(--muted);font-size:.82rem}
+.contact{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;padding:38px;border:1px solid rgba(200,255,77,.18);border-radius:28px;background:radial-gradient(circle at 85% 50%,rgba(154,124,255,.13),transparent 35%),linear-gradient(135deg,#0d1622,#080d15)}
+.contact h2{font-size:clamp(2.2rem,4vw,4.3rem);line-height:.95;letter-spacing:-.06em;margin:10px 0}.contact p{color:var(--muted);max-width:560px}.mail{font:500 .78rem "DM Mono",monospace;color:var(--cyan)}
+footer{padding:45px 0;color:#677385;font-size:.75rem;border-top:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-side{display:none}.about,.facts,.project,.project.featured{grid-column:span 12}.skills{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}}
+@media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 28px))}.links{display:none}.hero{padding-top:125px}.hero-grid{gap:0}h1{font-size:clamp(3.2rem,16vw,5rem)}section{padding:75px 0}.section-title{display:block}.section-title p{margin-top:14px}.skills,.case-grid,.ach{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:7px}.project{min-height:330px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="logo" href="#top">SK<span>.</span>MEERA</a><div class="links"><a href="#profile">Profile</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></div></nav>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+<div class="reveal">
+  <div class="eyebrow"><span class="dot"></span> AI SYSTEMS · NETWORKING · SECURITY</div>
+  <h1>I build <span class="gradient">intelligent systems</span> that hold up in the real world.</h1>
+  <p class="lead">I'm <b>SK Khalic Meera</b> — an M.Tech student in Communication & Networks at NIT Rourkela. I work across <b>GenAI, machine learning, systems and networking</b>, with a strong interest in building reliable, security-minded AI systems.</p>
+  <div class="actions"><a class="btn main" href="#work">See selected work ↗</a><a class="btn" href="SK_Khalic_Meera_Resume.pdf">View résumé</a><a class="btn" href="mailto:khalicmeera143@gmail.com">Start a conversation</a></div>
+</div>
+<div class="hero-side reveal">
+  <div class="terminal"><div class="term-top"><i></i><i></i><i></i></div><div class="term-body">
+<span class="prompt">$</span> whoami<br>
+<span class="blue">sk_khalic_meera</span><br><br>
+<span class="prompt">role</span> → M.Tech / Builder<br>
+<span class="prompt">focus</span> → AI systems<br>
+<span class="prompt">systems</span> → C++ · Linux · TCP/IP<br>
+<span class="prompt">genai</span> → RAG · FAISS · LLM APIs<br>
+<span class="prompt">security</span> → ML · intrusion detection<br><br>
+<span class="purple">status:</span> building & learning
+  </div></div>
+</div>
+</div></section>
+
+<section id="profile"><div class="wrap">
+<div class="section-title reveal"><div><div class="eyebrow">01 / Profile</div><h2>AI first. Systems underneath.</h2></div><p>The portfolio is intentionally weighted toward AI-relevant work while keeping the systems depth that makes the profile distinctive.</p></div>
+<div class="bento">
+<article class="card about reveal"><p>I like problems where intelligence meets infrastructure: retrieval pipelines, networked services, security evaluation and concurrent systems. My goal is to turn concepts into working software — then understand where that software can fail.</p><div class="tags"><span class="tag">Applied AI</span><span class="tag">RAG</span><span class="tag">ML security</span><span class="tag">C++ systems</span><span class="tag">Networking</span><span class="tag">Concurrency</span></div></article>
+<article class="card facts reveal"><div class="fact-grid"><div class="fact"><strong>8.33</strong><span>M.Tech CGPA · NIT Rourkela</span></div><div class="fact"><strong>8.40</strong><span>B.Tech CGPA · KL University</span></div><div class="fact"><strong>1st</strong><span>IEEE WIE Idea Pitch</span></div><div class="fact"><strong>2026</strong><span>IEEE paper presenter</span></div></div></article>
+</div></div></section>
+
+<section id="work"><div class="wrap">
+<div class="section-title reveal"><div><div class="eyebrow">02 / Selected work</div><h2>Three projects. One direction.</h2></div><p>For an AI-focused application, these are the projects I would put above the fold. The embedded project stays in the portfolio as supporting systems experience, not as a headline.</p></div>
+<div class="bento">
+<article class="card project featured reveal"><div class="feature-orb"></div><div class="num">01 — FEATURED · GENAI</div><h3>AI-Powered Document Intelligence Assistant</h3><p>Built a RAG-based document question-answering application with ingestion, text chunking, embedding generation and semantic retrieval. Integrated an LLM API and exposed the workflow through modular FastAPI endpoints.</p><div class="stack">PYTHON · RAG · LLM APIs · EMBEDDINGS · FAISS · FASTAPI</div></article>
+<article class="card project reveal"><div class="num">02 — AI + SECURITY</div><h3>IoMT Intrusion Detection System</h3><p>Machine-learning approach to malicious network-traffic classification, with feature engineering, model comparison and evaluation using precision, recall and F1-score.</p><div class="stack">PYTHON · XGBOOST · LIGHTGBM · SCIKIT-LEARN</div></article>
+<article class="card project reveal"><div class="num">03 — SYSTEMS</div><h3>HTTP Web Server</h3><p>Lightweight C++ server using Linux sockets and TCP/IP, with an epoll-based event-driven architecture and thread pool for concurrent connections.</p><div class="stack">C++ · LINUX · TCP/IP · HTTP · EPOLL</div></article>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="section-title reveal"><div><div class="eyebrow">03 / Systems foundation</div><h2>Useful, but not the headline.</h2></div><p>Your embedded work is valuable for showing real-time systems, concurrency and hardware interfacing — especially for AI companies building agents into the physical world.</p></div>
+<div class="case-grid">
+<div class="case reveal"><div class="label">Supporting project · Embedded</div><h3>Smart Traffic Light Controller</h3><p>ESP32 + C++ + FreeRTOS project implementing concurrent tasks for traffic signals, vehicle detection and pedestrian crossing, using queues, semaphores and GPIO synchronization.</p></div>
+<div class="case reveal"><div class="label">Why it stays</div><h3>It demonstrates engineering depth.</h3><p>It doesn't compete with the AI projects for attention. Instead, it quietly proves you understand concurrency, synchronization and systems that interact with the real world.</p></div>
+</div></div></section>
+
+<section id="journey"><div class="wrap">
+<div class="section-title reveal"><div><div class="eyebrow">04 / Journey</div><h2>Where I come from.</h2></div></div>
+<div class="timeline reveal">
+<div class="row"><div class="date">2025 — PRESENT</div><div><h3>M.Tech — Communication and Networks</h3><div class="org">National Institute of Technology, Rourkela · CGPA 8.33</div></div></div>
+<div class="row"><div class="date">JUL — DEC 2022</div><div><h3>Technical Intern — Mobile Application Development</h3><div class="org">FUTZEN E-Technologies Pvt. Ltd.</div><p>Developed Android applications using Java and XML; designed and maintained MySQL databases for backend data management.</p></div></div>
+<div class="row"><div class="date">2019 — 2023</div><div><h3>B.Tech — Computer Science and Engineering</h3><div class="org">Koneru Lakshmaiah University · CGPA 8.40</div></div></div>
+</div></div></section>
+
+<section id="stack"><div class="wrap">
+<div class="section-title reveal"><div><div class="eyebrow">05 / Technical stack</div><h2>Tools I actually use.</h2></div></div>
+<div class="skills">
+<div class="skill reveal"><h3>AI / GenAI</h3><p>RAG · LLM APIs · Embeddings · FAISS · Semantic Retrieval</p></div>
+<div class="skill reveal"><h3>Machine Learning</h3><p>Scikit-learn · XGBoost · LightGBM · Feature Engineering · Model Evaluation</p></div>
+<div class="skill reveal"><h3>Systems & Concurrency</h3><p>C · C++ · Linux · Multithreading · Thread Pools · Synchronization · FreeRTOS</p></div>
+<div class="skill reveal"><h3>Networking</h3><p>TCP/IP · HTTP · Socket Programming · Computer Networks · epoll</p></div>
+<div class="skill reveal"><h3>Embedded</h3><p>ESP32 · GPIO · SPI · I2C · PWM</p></div>
+<div class="skill reveal"><h3>Backend</h3><p>FastAPI · REST APIs · MySQL · SQLite</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<div class="section-title reveal"><div><div class="eyebrow">06 / Recognition</div><h2>Signals that matter.</h2></div></div>
+<div class="ach">
+<div class="award reveal"><div class="mark">IEEE · 2026</div><h3>Paper Presenter — IEEE 1st International Conference on Instrumentation</h3><p>Presented “Machine Learning-Based Real-time Intrusion Detection System for IoMT Networks”.</p></div>
+<div class="award reveal"><div class="mark">IEEE WIE · 2026</div><h3>1st Prize — Idea Pitch & Poster Presentation</h3><p>Recognized for “ML-Based Intrusion Detection System for Internet of Medical Things”.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact reveal">
+<div><div class="eyebrow">07 / Contact</div><h2>Let's build something<br><span class="gradient">worth shipping.</span></h2><p>For opportunities in AI, ML, AI safety, systems or networking, I'd be glad to connect.</p><div class="mail">khalicmeera143@gmail.com</div></div>
+<div class="actions"><a class="btn main" href="mailto:khalicmeera143@gmail.com">Email me ↗</a><a class="btn" href="SK_Khalic_Meera_Resume.pdf">Résumé ↓</a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap">© 2026 SK Khalic Meera · AI systems / networking / security · Built as a fast static site.</div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+</script>
+</body>
+</html>
